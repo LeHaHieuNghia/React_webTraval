@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+/* *{
+  margin: 0%;
+  padding: 100px;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), Ohsl (199, 100%, 33%));
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: ■rgb(240, 240, 246);
+  --cardBG: ■rgb(225, 225, 235);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.icon{
+  font-size: 2rem;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+a{
+  text-decoration: none;
+}
+li{
+  /* list-style-type: none; */
+
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), Ohsl (199, 100%, 33%));
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: ■rgb(240, 240, 246);
+  --cardBG: ■rgb(225, 225, 235);
+}
+* {
+  margin: 0%;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.flex {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li {
+  list-style: none;
+}
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.header {
+  background-color: var(--PrimaryColor);
 }
