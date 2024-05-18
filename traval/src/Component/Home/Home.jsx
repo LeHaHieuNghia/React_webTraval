@@ -3,6 +3,11 @@ import video from "../../asset/video.mp4";
 import "./homee.scss";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaFilter } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { CiViewList } from "react-icons/ci";
+import { TbApps } from "react-icons/tb";
 
 const Home = () => {
   return (
@@ -15,7 +20,6 @@ const Home = () => {
           <span className="spand smallText">Our packeges</span>
           <h1 className="homeTitle">search your holiday</h1>
         </div>
-
         <div className="cardDiv grid">
           <div className="destinationInput">
             <label htmlFor="city">Search your destination:</label>
@@ -32,6 +36,7 @@ const Home = () => {
               <input type="date"></input>
             </div>
           </div>
+
           <div className="priceInput">
             <div className="lable_total flex">
               <label htmlFor="city">Max price:</label>
@@ -42,9 +47,20 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="searchOption flex">
+          <div className="searchOptions flex">
             <FaFilter className="icon" />
             <span>More Filter</span>
+          </div>
+        </div>
+        <div className="homeFootericons flex">
+          <div className="rightIcons">
+            <FaFacebook className="icon" />
+            <FaInstagram className="icon" />
+            <FaGithub className="icon" />
+          </div>
+          <div className="leftIcons">
+            <CiViewList className="icon" />
+            <TbApps className="icon" />
           </div>
         </div>
       </div>
