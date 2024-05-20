@@ -71,3 +71,11 @@ body {
 .section{
   padding:  4rem 0 2rem;
 }
+
+
+@media screen and (min-width: 940px) {
+  body {
+      zoom:1.3;
+  }
+}
+

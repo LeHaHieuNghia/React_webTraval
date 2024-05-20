@@ -40,6 +40,7 @@
         bottom: 0;
         object-fit: cover;
     }
+
     .homeConten {
         width: 100%;
         height: max-content;
@@ -60,6 +61,7 @@
                 font-size: 13px;
                 text-transform: uppercase;
             }
+
             .homeTitle {
                 position: relative;
                 font-size: 1.5rem;
@@ -89,12 +91,14 @@
             .lable_total {
                 justify-content: space-between;
                 align-items: center;
+
                 .total {
                     color: var(--textColor);
                     font-size: 19px;
                     padding-bottom: 10px;
                 }
             }
+
             .input {
                 height: 40px;
                 padding: 0 1rem;
@@ -108,15 +112,18 @@
                     width: 100%;
                     font-size: 19px;
                     font-weight: 600;
+
                     &::placeholder {
                         font-size: 13px;
                     }
                 }
+
                 .icon {
                     font-size: 15px;
                     color: var(--black) !important;
                     margin-left: 10px;
                 }
+
                 .input[type="range"] {
                     background: blue;
                 }
@@ -134,23 +141,28 @@
                 left: 50%; //đặt lại vị trí
                 transform: translate(-50%); //dặt lại vtri
                 cursor: pointer;
+
                 .icon {
                     font-size: 15px;
                     color: white;
                 }
+
                 &:hover {
                     background: var(--PrimaryColor);
                 }
             }
         }
+
         .homeFootericons {
             width: 100%;
             justify-content: space-between;
+
             .icon {
                 font-size: 20px;
                 margin: 0 5px;
                 font-weight: 600;
                 color: var(--whiteColor);
+
                 &:hover {
                     color: var(--PrimaryColor);
                 }
@@ -158,4 +170,81 @@
         }
     }
 }
+
 // MEDIA QUERIES==============================================GOODLOOK================
+@media screen and (min-width: 500px) {
+    .home {
+        .homeConten {
+            .textDiv {
+                .smallText {
+                    font-size: 16px;
+                }
+
+                .homeTitle {
+                    position: relative;
+                    font-size: 2.3rem;
+                    width: max-content;
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        background: var(--SecondaryColor);
+                        height: 5px;
+                        width: 145px;
+                        right: 0px;
+                        bottom: 5px;
+                        z-index: -1;
+
+                    }
+
+                }
+            }
+
+            .cardDiv {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}   
+
+@media screen and (min-width: 660px) {
+    .home {
+        .homeConten{
+            .cardDiv{
+                padding: 2rem 1rem;
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+    }
+}
+
+// @media screen and (min-width: 940px) {
+//     .home {
+//         height: 70vh;
+//     }
+// }
+
+@media screen and (min-width: 1240px) {
+    .home {
+        height: 95vh;
+
+        .homeConten{
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .cardDiv{
+            padding: 2rem 1rem;
+            grid-template-columns: repeat(3,1fr);
+            .input{
+                margin-bottom:1rem ;
+            }
+            .searchOptions{
+                bottom: -1rem;
+                padding: 8px 1rem;
+                span{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
