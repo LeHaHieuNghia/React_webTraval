@@ -1,0 +1,180 @@
+:root {
+    --PrimaryColor: hsl(199, 100%, 33%);
+    --SecondaryColor: hsl(187, 85%, 43%);
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), Ohsl (199, 100%, 33%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(201, 33%, 16%);
+    --black: hsl(0, 0%, 0%);
+    --red: hsl(0, 94%, 51%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: ■rgb(240, 240, 246);
+    --cardBG: ■rgb(225, 225, 235);
+}
+
+.main {
+    .secTitle {
+        .title {
+            position: relative;
+            width: max-content;
+            color: var(--textColor);
+            margin: 1rem 0;
+            z-index: 2;
+
+            &::after {
+                position: absolute;
+                content: '';
+                background: var(--SecondaryColor);
+                height: 5px;
+                width: 120px;
+                right: 0;
+                bottom: 5px;
+                z-index: -1;
+            }
+        }
+
+    }
+
+    .secContent {
+        justify-content: center;
+        gap: 1.5rem;
+
+        .singleDestination {
+            height: 100%;
+            display: grid;
+            row-gap: 10px;
+            border-radius: 10px;
+            align-items: center;
+            box-shadow: 0 2px 4px rgb(0, 0, 0);
+            overflow: hidden;
+
+            &:hover {
+                box-shadow: 1 4px 4px rgb(6, 3, 3);
+                transition: .3s ease;
+            }
+
+            .imageDiv {
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    transition: 2s ease;
+                }
+
+                &:hover {
+                    img {
+                        transform: scale(1.3);
+                    }
+                }
+            }
+
+            .cardInfor {
+                padding: 1rem;
+
+                .destTitle {
+                    color: var(--black);
+                    font-size: 1.5rem;
+                }
+
+                .continent {
+                    gap: .5rem;
+                    font-size: 13px;
+                    color: var(--textColor);
+                    font-weight: 400;
+
+                    .icon {
+                        font-size: 18px;
+                        color: var(--textColor);
+
+                    }
+
+                    .name {
+                        color: var(--textColor);
+                        font-weight: 400;
+                        font-size: 14px;
+                        font-weight: 600;
+
+                    }
+                }
+
+                .fees {
+                    width: 100%;
+                    justify-content: space-between;
+                    font-size: 13px;
+                    padding: 1rem;
+                    margin: 1rem 0;
+                    border-top: 1.5px solid var(--greyText);
+                    border-bottom: 1.5px solid var(--greyText);
+
+                    .gradle {
+                        color: var(--red);
+                        max-width: 100px;
+                        line-height: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 600;
+
+
+                        small {
+                            text-align: center;
+                            background: var(--PrimaryColor);
+                            color: var(--whiteColor);
+                            border-radius: .5rem;
+                            padding: 3px 0;
+                            margin-left: 4px;
+
+                            &:hover {
+                                color: var(--black);
+                            }
+
+                        }
+                    }
+                }
+
+                .des {
+                    font-size: 13px;
+                    font-weight: 500;
+                    color: var(--textColor);
+                }
+
+                .btn {
+                    margin-top: 1rem;
+                    font-size: 13px;
+                    font-weight: 600;
+                    justify-content: space-between;
+
+                    .icon {
+                        font-size: 19px;
+                        align-self: center;
+                        margin-left: 4px;
+                        margin-top: -4px;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+
+}
+
+//========================================//
+@media screen and (min-width:900px) {
+    .title{
+        font-size: 1.5rem;
+        &::after{
+            width: 155px !important;
+        }
+        .secContent{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}

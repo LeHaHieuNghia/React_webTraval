@@ -5,6 +5,7 @@
     --whiteColor: hsl(0, 0%, 100%);
     --blackColor: hsl(201, 33%, 16%);
     --black: hsl(0, 0%, 0%);
+    --red: hsl(0, 94%, 51%);
     --textColor: hsl(240, 4%, 36%);
     --whiteColorDeam: hsl(0, 0%, 93%);
     --greyText: rgb(190, 190, 190);
@@ -15,7 +16,7 @@
 
 .header {
     text-decoration: none;
-    position: fixed;
+    position: fixed; //luôn luôn vẫn ở cùng một vị trí ngay cả khi trang được cuộn
     display: flex;
     align-items: center;
     justify-content: space-between; //khoảng cách ở giữa
@@ -31,6 +32,9 @@
         cursor: pointer;
         align-items: center;
         justify-content: center;
+        &:hover {
+            color: var(--PrimaryColor);
+        }
 
         .icon {
             font-size: 25px;
@@ -55,14 +59,14 @@
             transition: 0.1s ease-in-out;
 
             .navlists {
-                flex-direction: column;
+                flex-direction: column; 
                 justify-content: center;
                 width: 100%;
                 margin: auto;
                 padding: 0.5rem 0;
 
-                // display: flex;
-                // align-items: center;
+                display: flex;
+                align-items: center;
                 .navItem {
                     padding: 0.5rem 0;
 
@@ -92,8 +96,8 @@
                 top: 1rem;
                 right: 1rem;
                 color: var(--PrimaryColor);
-                &hover {
-                    color: var(--SecondaryColor);
+                &:hover {
+                    color: var(--red);
                 }
             }
         }
@@ -106,7 +110,7 @@
         .icon {
             font-size: 25px;
             color: var(--PrimaryColor);
-            &hover {
+            &:hover {
                 color: var(--SecondaryColor);
             }
         }
@@ -140,9 +144,9 @@
                 .btn {
                     margin-left: 1rem;
                     a {
+                        color: var(--whiteColor);
+                        font-weight: 500;
                     }
-                    color: var(--whiteColor);
-                    font-weight: 500;
                 }
             }
         }
